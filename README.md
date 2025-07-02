@@ -21,7 +21,7 @@ A system that fetches live news headlines using MCP (Model Context Protocol) ser
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/DavidZucchet/news-narrator
+   git clone <repository-url>
    cd news-narrator
    ```
 
@@ -52,6 +52,8 @@ A system that fetches live news headlines using MCP (Model Context Protocol) ser
 ```bash
 uv run python main.py
 ```
+
+**⏰ First Run Note:** The initial execution will take approximately **10 minutes** to download the Stable Diffusion model (~4GB). Subsequent runs will start much faster as the model is cached locally.
 
 ### Interactive Flow
 1. **Choose headline count**: Enter number of headlines (1-20, default: 5)
@@ -128,6 +130,8 @@ uv run mypy main.py
 - Check network connectivity
 
 **Image Generation Errors**
+- **First run takes time**: Initial setup downloads Stable Diffusion model (~4GB, ~10 minutes)
+- **Subsequent runs**: Much faster as model is cached locally
 - The system uses CPU by default with optimizations
 - Check disk space in output directory
 - For faster generation, ensure you have adequate RAM
